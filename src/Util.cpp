@@ -195,11 +195,11 @@ void Util::loadCurvesAndProject(std::string filename, std::vector<PolygonalPath>
             else{
                 if (count++ % 10 != 0)
                     continue;
-                float xx = x;
-                float yy = y;
+                //float xx = x;
+                //float yy = y;
                 // float tt = t;
 
-                lat_long_to_mercator(x,y,xx,yy);
+//                lat_long_to_mercator(x,y,xx,yy);
 
                 pair<Vector2D, float> newPoint = make_pair(Vector2D(x,y), t);
                 curveContents.push_back(newPoint);
