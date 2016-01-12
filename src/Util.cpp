@@ -63,16 +63,16 @@ void Util::loadCurves(string filename, vector<PolygonalPath>& curves,
     int real_index = 0;
     if (file.is_open())
     {
-        //file >> xmin >> xmax >> ymin >> ymax >> tmin >> tmax;
-        file >> ymin >> ymax >> xmin >> xmax >> tmin >> tmax;
+      file >> xmin >> xmax >> ymin >> ymax >> tmin >> tmax;
+      //file >> ymin >> ymax >> xmin >> xmax >> tmin >> tmax;
 
         vector<pair<Vector2D,float> > curveContents;
 
         while (file.good()  && !file.eof())
         {
             float x,y,t;
-            //file >> x >> y >> t;
-            file >> y >> x >> t;
+            file >> x >> y >> t;
+            //file >> y >> x >> t;
 
             if(x == 0 && y == 0 && t == 0) {
                 if(curveContents.size() >=2){
